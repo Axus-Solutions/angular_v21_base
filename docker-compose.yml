@@ -1,0 +1,12 @@
+services:
+  frontend:
+    build: .
+    container_name: minialura_frontend
+    ports:
+      - "4200:4200"
+    volumes:
+      - .:/app
+      - /app/node_modules
+      - pnpm-store:/pnpm-store
+volumes:
+  pnpm-store:
